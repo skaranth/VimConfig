@@ -19,6 +19,7 @@ let g:mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
+syntax enable
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -35,6 +36,9 @@ set wildignore=*.o,*~,*.pyc
 
 "Always show current position
 set ruler
+
+" Line numbers on
+set nu 
 
 " Height of the command bar
 set cmdheight=2
@@ -355,43 +359,7 @@ endfunction
 """""""""""""""""""Pathogen setup"""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call pathogen#infect()
-
+call pathogen#helptags()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-map   :cn 
-set nocompatible  " We don't want vi compatibility.
 
-" Add recently accessed projects menu (project plugin)
-"set viminfo^=!
-
-" Minibuffer Explorer Settings
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
-
-" alt+n or alt+p to navigate between entries in QuickFix
-"map   :cp 
-
-" Change which file opens after executing :Rails command
-let g:rails_default_file='config/database.yml'
-
-syntax enable
-set cf  " Enable error files & error jumping.
-set clipboard+=unnamed  " Yanks go on clipboard instead.
-set history=256  " Number of things to remember in history.
-set autowrite  " Writes on make/shell commands
-set nu  " Line numbers on
-set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-"set nowrap
-
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/skaranth/work/tw/cde/Corndog'
-let g:netrw_dirhist_2='/Users/skaranth/work/tw/cde/Corndog/lib'
-let g:netrw_dirhist_3='/Users/skaranth/work/tw/cde/Corndog/lib/api'
-let g:netrw_dirhist_4='/Users/skaranth/work/tw/cde/Corndog'
-let g:netrw_dirhist_5='/Users/skaranth/work/tw/cde/Corndog/app'
-let g:netrw_dirhist_6='/Users/skaranth/work/tw/cde/Corndog/app/controllers'
-let g:netrw_dirhist_7='/Users/skaranth/work/tw/cde/Corndog/app/controllers/api'
-let g:netrw_dirhist_8='/Users/skaranth/work/tw/cde/Corndog'
