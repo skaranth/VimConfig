@@ -351,9 +351,12 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""Pathogen setup"""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call pathogen#infect()
 
-
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 map   :cn 
 set nocompatible  " We don't want vi compatibility.
